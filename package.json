@@ -1,0 +1,29 @@
+{
+  "name": "sysHUB-Paginator",
+  "version": "1.0.0",
+  "description": "An openUI5 sysHUB control extended from a earlier openUI5 version",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StErMi/openui5-qrcode"
+  },
+  "keywords": [
+    "paginator",
+    "openui5",
+    "sapui5",
+    "ui5",
+    "javascript",
+    "syshub"
+  ],
+  "author": {
+    "name": "Wolfgang Haag",
+    "email": "whaag@nt-ware.com"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "startApp": "ui5 serve -p 8088 -o test-resources/webapp/index.html",
+    "build": "ui5 build"
+  },
+  "devDependencies": {},
+  "dependencies": {
+  }
+}

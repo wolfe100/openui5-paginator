@@ -1,0 +1,117 @@
+<!--
+ Copyright (c) NT-ware ES 2008-2023. All Rights Reserved.
+ Internet : https://www.nt-ware.com
+ Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+-->
+<mvc:View xmlns="sap.m"
+		xmlns:html="http://www.w3.org/1999/xhtml"
+		  xmlns:mvc="sap.ui.core.mvc"
+		  xmlns:l="sap.ui.layout"
+		  xmlns:f="sap.ui.layout.form"
+		  xmlns:lab="syshub.controls"
+		  xmlns:core="sap.ui.core"
+		  xmlns:t="sap.ui.table"
+		  controllerName="syshubDemo.controller.App" displayBlock="true">
+	<Shell>
+		<App>
+			<pages>
+				<Page title="{i18n>appTitle}" backgroundDesign="Solid">
+					<subHeader>
+						<Toolbar>
+							<ToolbarSpacer/>
+							<Button id="idGetData" text="{i18n>getData}" width="250px" press="onGetData"/>
+							<ToolbarSpacer/>
+						</Toolbar>
+					</subHeader>
+					<content>
+						<t:Table
+							id="idTable"
+							rows="{path: 'modelEntries>/'}"
+							visibleRowCountMode="Auto"
+							minAutoRowCount="1"
+							selectionMode="Single"
+							selectionBehavior="RowOnly"
+							class="sapUiSmallMarginBeginEnd"
+							rowActionCount="1"
+							alternateRowColors="true"
+							rowHeight="24px">
+							<t:footer>
+								<lab:Paginator id="idPaginator"
+											   currentPage="{modelEntriesMetadata>/currentPage}"
+											   entriesAbsolute="{modelEntriesMetadata>/entriesAbsolute}"
+											   entriesPerPage="{modelEntriesMetadata>/entriesPerPage}"
+											   numberOfVisiblePages="10"
+											   showGoto="true"
+											   entriesPerPageVisible = "true"
+											   showSpinner="{modelEntriesMetadata>/showSpinner}"
+											   page="onPage"
+											   entriesPerPageChanged = "onEntriesPerPageChanged">
+								</lab:Paginator>
+							</t:footer>
+							<t:columns>
+								<t:Column id="idId" width="5rem" >
+									<Label text="Id" />
+									<t:template>
+										<Text text="{modelEntries>id}" />
+									</t:template>
+								</t:Column>
+								<t:Column id="idType"  width="6rem" >
+									<Label text="Type" />
+									<t:template>
+										<Text text="{modelEntries>type}" />
+									</t:template>
+								</t:Column>
+								<t:Column id="idTitle" width="8rem"  >
+									<Label text="Title" />
+									<t:template>
+										<Text text="{modelEntries>title}" />
+									</t:template>
+								</t:Column>
+								<t:Column id="idUser" width="6rem">
+									<Label text="User" />
+									<t:template>
+										<Text text="{modelEntries>user}" />
+									</t:template>
+								</t:Column>
+								<t:Column id="idDescription" width="11rem">
+									<Label text="Description" />
+									<t:template>
+										<Text text="{modelEntries>description}" />
+									</t:template>
+								</t:Column>
+								<t:Column id="idCustom1" width="10rem">
+									<Label text="Custom1" />
+									<t:template>
+										<Text text="{modelEntries>custom1}" />
+									</t:template>
+								</t:Column>
+								<t:Column id="idCustom2" width="10rem">
+									<Label text="Custom2" />
+									<t:template>
+										<Text text="{modelEntries>custom2}" />
+									</t:template>
+								</t:Column>
+								<t:Column id="idCustom3" width="10rem">
+									<Label text="Custom3" />
+									<t:template>
+										<Text text="{modelEntries>custom3}" />
+									</t:template>
+								</t:Column>
+								<t:Column id="idCustom4" width="10rem">
+									<Label text="Custom4" />
+									<t:template>
+										<Text text="{modelEntries>custom4}" />
+									</t:template>
+								</t:Column>
+							</t:columns>
+						</t:Table>
+
+					</content>
+					<footer>
+
+					</footer>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

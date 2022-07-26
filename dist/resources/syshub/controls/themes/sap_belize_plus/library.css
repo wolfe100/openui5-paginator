@@ -1,0 +1,136 @@
+/*
+ * Copyright (c) NT-ware ES 2008-2023. All Rights Reserved.
+ * Internet : https://www.nt-ware.com
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+.UiPag{
+  display:inline-block;
+  user-select: none;
+}
+
+.UiPagLeft{
+  display:inline-block;
+  user-select: none;
+  float: left;
+  padding: 5px 5px 5px 5px;
+  font-weight: lighter;
+  color:#427CAC;
+}
+
+.UiPagRight{
+  display:inline-block;
+  user-select: none;
+  float: right;
+  font-weight: lighter;
+}
+
+.UiPagNav{
+  font-family: sap-icons;
+  padding: 5px 5px 5px 5px;
+  display:inline-block;
+  color:#427CAC;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.UiPagNav:hover{
+  color: #FFFFFF;
+  background: #427CAC;
+}
+
+.UiPagNavDisabled{
+  font-family: sap-icons;
+  padding: 5px 5px 5px 5px;
+  display:inline-block;
+  cursor: default ;
+  color:#427CAC;
+  opacity: 0.5;
+  background: #FFFFFF;
+  font-size: 1rem;
+}
+
+.UiPagPage{
+  padding: 2px 5px 1px 5px;
+  display:inline-block;
+  color: #427CAC;
+  vertical-align:top;
+}
+
+.UiPagRight>ul{
+  display:inline-flex;
+  justify-content: center;
+  padding:0;
+  color: #427CAC;
+  vertical-align:top;
+  margin:3px 6px 0;
+}
+.UiPagPage:hover{
+  color: #FFFFFF;
+  background: #427CAC;
+  display:inline-block;
+  cursor: pointer;
+}
+
+.UiPagPageDisabled{
+  padding: 1px 5px 1px 5px;
+  display:inline-block;
+  cursor: default ;
+  color: #427CAC;
+  opacity: 0.5;
+  background: #FFFFFF;
+  font-size: 1rem;
+}
+
+.UiPagCurrentPage{
+  border:1px solid #427CAC;
+  padding: 0px 5px 0px 5px;
+}
+
+.UiPagGotoButton{
+  margin-left: 20px;
+  padding: 3px 3px 3px 3px;
+  display:inline-block;
+  color: #427CAC;
+  font-size: 1rem;
+}
+
+
+.UiPagGotoButton:hover{
+  color: #FFFFFF;
+  background: #427CAC;
+  display:inline-block;
+  cursor: pointer;
+}
+.UiPagGotoInput{
+  margin-left: 10px;
+  margin-top: -5px;
+  width: 80px;
+  padding: 3px 3px 3px 3px;
+  font-size: 1rem;
+}
+
+.UiPagEntrySelect {
+  margin: 0px 5px 0px 5px;
+  font-size: 1rem;
+  color: #427CAC;
+}
+
+.UiPagSpinner {
+  height: 8px;
+  width: 8px;
+  margin: 5px 2px 0px 0px;
+  color: #427CAC;
+  display:inline-block;
+  visibility: hidden;
+  position: relative;
+  border: 2px solid;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: rotate 1s linear infinite; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); }
+}

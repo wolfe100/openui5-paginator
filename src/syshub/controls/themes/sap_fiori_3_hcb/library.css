@@ -1,0 +1,146 @@
+/*
+ * Copyright (c) NT-ware ES 2008-2023. All Rights Reserved.
+ * Internet : https://www.nt-ware.com
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+.UiPag{
+    display:inline-block;
+    user-select: none;
+
+}
+.UiPagLeft{
+    display:inline-block;
+    user-select: none;
+    float: left;
+    padding: 5px 5px 5px 5px;
+    font-weight: lighter;
+}
+
+.UiPagRight{
+    display:inline-block;
+    user-select: none;
+    float: right;
+}
+
+.UiPagNav{
+    font-family: sap-icons;
+    padding: 5px 5px 5px 5px;
+    display:inline-block;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: lighter;
+
+}
+
+.UiPagNav:hover{
+    color: #FFFFFF;
+    background: #7A5100;
+    display:inline-block;
+    cursor: pointer;
+    font-weight: lighter;
+
+}
+
+.UiPagNavDisabled{
+    font-family: sap-icons;
+    padding: 5px 5px 5px 5px;
+    display:inline-block;
+    cursor: default ;
+    color: grey;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.UiPagPage{
+    padding: 1px 5px 1px 5px;
+    display:inline-block;
+    color: #FFFFFF;
+    vertical-align:top;
+}
+
+.UiPagRight>ul{
+    display:inline-flex;
+    justify-content: center;
+    padding:0;
+    color: #000000;
+    vertical-align:top;
+    margin:3px 6px 0;
+    font-weight: lighter;
+}
+.UiPagPage:hover{
+    color: #FFFFFF;
+    background: #7A5100;
+    display:inline-block;
+    cursor: pointer;
+    font-weight: lighter;
+
+}
+
+.UiPagPageDisabled{
+    padding: 1px 5px 1px 5px;
+    display:inline-block;
+    cursor: default ;
+    color: #333333;
+    opacity: 0.5;
+    background: #FFFFFF;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.UiPagCurrentPage{
+    border:1px solid #FFFFFF;
+    padding: 0px 5px 0px 5px;
+
+}
+
+
+.UiPagGotoButton{
+    margin-left: 20px;
+    padding: 3px 3px 3px 3px;
+    display:inline-block;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.UiPagGotoButton:hover{
+    color: #FFFFFF;
+    background: #7A5100;
+    display:inline-block;
+    cursor: pointer;
+}
+.UiPagGotoInput{
+    margin-left: 10px;
+    margin-top: -5px;
+    width: 60px;
+    padding: 3px 3px 3px 3px;
+    font-size: 1rem;
+    color: #FFFFFF;
+    font-weight: lighter;
+
+}
+
+.UiPagEntrySelect {
+    margin: 0px 5px 0px 5px;
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+.UiPagSpinner {
+    height: 8px;
+    width: 8px;
+    margin: 5px 2px 0px 0px;
+    color: #dadada;
+    display:inline-block;
+    visibility: hidden;
+    position: relative;
+    border: 2px solid;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: rotate 1s linear infinite; }
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0); }
+    100% {
+        transform: rotate(360deg); }
+}

@@ -1,0 +1,27 @@
+{
+	"syshub.paginator": {
+        "icon": "sap-icon://bar-code",
+        "name": "Paginator",
+		"description": "Extended control from a earlier UI5 version",
+		"source": "https://github.com/StErMi/openui5-qrcode",
+		"documentation": "https://github.com/StErMi/openui5-qrcode/blob/master/README.md",
+		"demo": "https://stermi.github.io/openui5-qrcode/demo/webapp/",
+		"version": "1.0.0",
+		"license": "Apache 2.0",
+		"content": {
+			"Paginator": {
+				"id": "idPaginator",
+				"name": "Paginator",
+				"type": "control",
+				"version": "1.0.0",
+				"description": "Allows navigation in tables with many entries (JSON based)",
+				"samples": [{
+					"id": "idPaginator",
+					"name": "Paginator",
+					"description": "Allows navigation in tables with many entries (JSON based)",
+					"url": "https://stermi.github.io/openui5-qrcode/demo/webapp/"
+				}]
+			}
+		}
+	}
+}
