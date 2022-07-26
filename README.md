@@ -4,11 +4,22 @@ openui5-paginator is a SAPUI5 Custom Control that allow you to handle large data
 
 ![Pagiantor preview](preview.PNG)
 
+## Motivation
+We are using openUI5 on the client side as the base technologie for our product "sysHUB". On the server side we are using our own REST based API.
+The main thing is, we are working with large table entries. The base technologie of openUI5 and sapUI5 is oData V4 to get data from the backend.
+In our case this is not a good choice, because we are providing some REST-Services for our customer and we can not implement REST-Services 
+and oData Services to the same time in our product. In an earlier version of openUI5 there was 
+a paginator included, but it was removed since 1.45 (I think). We are going on to develop the paginator to work with all newer versions
+and extended it with some useful features.
+
+
+
 ## Demo
 
-If you checkout this project, there is a "demo" app to see how the paginator works.
+If you check out this project, there is a "demo" app to see how the paginator works. We are using WebStorm as development IDE.
+Configure it as a "JavaScript Debug" run configuration to debug the demo app.
 
-## Usage
+## Usage the control
 
 ### Configure manifest.json
 
@@ -119,6 +130,28 @@ npm install
 ui5 build
 ui5 startApp
 ```
+
+## How to work with the control
+It is important to have a REST-Service with the following parameters. 
+
+    eg: /webapi/v3/data/list?offset=0&limit=20&orderBy=id.desc&search=id<1000
+
+We use RSQL-Queries in the orderBy and search criteria.
+
+The first query has no "id" search criteria. This means we got a snapshot view of the table
+and we got in the response header the "abs_count" and the "highest_id". All queries while paging,
+limited the query in the search criteria with the highest_id. The reason for this is, growing up the table
+with new entries will destroy paging if we don't have the highest_id in the search criteria.
+
+### Known issues
+One problem which we don't found a solution is removing of entries while paging. This means, 
+if another instance removes entries which are included in the query, the result is different, regarding
+the abs_count and the computing of paging can run in some problems but we live with this limitation. 
+
+Please have a look of the DataService.js and the mockserver.js to understand how paging is working.
+
+## Important
+If the value "entriesAbsolute" = 0, the paginator is not shown. Be sure to set this value after a query.
 
 ## Credits
 
