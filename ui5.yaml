@@ -1,4 +1,4 @@
-specVersion: '0.1'
+specVersion: "1.0"
 metadata:
   name: openui5-paginator
 type: library
@@ -11,7 +11,7 @@ metadata:
 shims:
   configurations:
     paginatorjs:
-      specVersion: "0.1"
+      specVersion: "1.0"
       type: module
       metadata:
         name: paginatorjs

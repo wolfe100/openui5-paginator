@@ -2,11 +2,11 @@
 
 openui5-paginator is a SAPUI5 Custom Control that allow you to handle large data in a Table. Navigation is done via paging.
 
-![Pagiantor preview](https://raw.githubusercontent.com/StErMi/openui5-pagianator/master/preview.PNG)
+![Pagiantor preview](preview.PNG)
 
 ## Demo
 
-You can checkout a demo with different configuration parameter here: https://stermi.github.io/openui5-qrcode/test/demo/
+If you checkout this project, there is a "demo" app to see how the paginator works.
 
 ## Usage
 
@@ -77,50 +77,54 @@ And then you can simply add the Paginator custom control to your "sap.ui.table"
 
 ## Events
 
-| Name                 | Type   | Default | Description
-|:---------------------|:-------|:--------| :---------  |
-| currentPage          | number | 0       | The current selected page or the page to set
-| entriesAbsolute      | number | 0       | The absolute count of the entires given by the query
-| showGoto             | bool   | false   | Shows the direct GOTO input field
-| entriesPerPage       | int    | 10      | How much entries should shown of each page
-| numberOfVisiblePages | number | 10      | How much pages shown which are directly selectable
-| showSpinner          | bool   | false   | Shows a spinner to give the user information to get data from the server
+### entriesPerPageChanged
+| Parameter | Type | Description
+|:----------|:-----| :---------  |
+| offset    | int  | The offset where to start the new query
+| limit     | int  | The new limit how many entries must get
+
+### page
+| Parameter  | Type | Description
+|:-----------|:-----| :---------  |
+| srcPage    | int  | The page which is the current one before the page event is fired (and another page is displayed)
+| targetPage | int  | The page that shall be displayed next after the page event is fired.
+| offset     | int  | The offset where to start the new query
+| limit      | int  | The limit how many entries must get
+| type      | syshub.controls.PaginatorEvent  | Provides the values 'First', 'Last', 'Next', 'Previous', 'Goto'. The event parameter informs the application how the user navigated to the new page: Whether the 'Next' button was used, or another button, or whether the page was directly selected
+
 
 ## Methods
 
-| Name |  Description
-| :---- | :------------------- |
-| reDraw | Draw the QRCode. If the QR Code does not exist it creates a new one, if it already exist it just refresh it
-| clear | Clear the QR Code
-| getText | Return the text of the QR Code
-| setText | Set a new text of the QR Code
-| getWidth | Return the width of the QR Code
-| setWidth | Set the width of the QR Code
-| getHeight | Return the text of the QR Code
-| setHeight | Set the height of the QR Code
-| getColorDark | Return the RGB dark color of the QR Code
-| setColorDark | Set the RGB dark color of the QR Code
-| getText | Return the text of the QR Code
-| getColorLight | Return the RGB light color of the QR Code
-| setColorLight | Set the RGB light color of the QR Code
-| getCorrectLevel | Return the Error Correction Level of the QR Code
-| setCorrectLevel | Set the Error Correction Level of the QR Code
+| Name                                     |  Description
+|:-----------------------------------------| :------------------- |
+| setCurrentPage(PageNumber)               | Sets the current page
+| getCurrentPage                           | Gets the current selected page
+| setEntriesAbsolute(AbsoluteQueryEntries) | Sets the absolute query entries to compute the pages
+| getEntriesAbsolute(AbsoluteQueryEntries) | Gets the absolute entries of the current query
+| setShowGoto(boolean value)               | If true, the show "GOTO" input field is shown.
+| getShowGoto()                            | Return the status of the showGoto property
+| setEntriesPerPage(Number)                | Set the count of the page entries are shown
+| GetEntriesPerPage()                      | Returns the number of page entries shown
+| SetNumberOfVisiblePages(Number)          | Set the count of visible pages are shown
+| getNumberOfVisiblePages()                | Gets the number of vissible pages shown
+| setShowSpinner(boolean value)            | If true a spinner is shown, to give the user a feedback
+| getShowSpinner()                         | Gets the status of the spinner
 
 ## Build
 
-If you would like to extend and customize the control, you can easily do that but re-building the code with just a simple Grunt command:
+If you would like to extend and customize the control, you can easily do that but re-building the code with just a simple ui5 cli commands:
 
 ```
 npm install
-grunt build
+ui5 build
+ui5 startApp
 ```
 
 ## Credits
 
-Emanuele Ricci
+Wolfgang Haag
 
- - Email: [stermi@gmail.com](stermi@gmail.com)
- - Twitter: [@StErMi](https://twitter.com/StErMi)
+ - Email: [whaag@nt-ware.com](whaag@nt-ware.com)
 
 ## License
-This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details
