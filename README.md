@@ -19,6 +19,8 @@ and extended it with some useful features.
 If you check out this project, there is a "demo" app to see how the paginator works. We are using WebStorm as development IDE.
 Configure it as a "JavaScript Debug" run configuration to debug the demo app.
 
+You can also use this link to see a working example:  [openui5-paginator-demo](https://wolfe100.github.io/)
+
 ## Usage the control
 
 ### Configure manifest.json
